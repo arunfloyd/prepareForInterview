@@ -256,60 +256,183 @@ Javascript
 
 
  ✓ DOM
- ✓ CDN vs Download
+  - The DOM is a programming interface that represents the structure of a document, such as HTML, as a tree of objects.
+  - Each node in the tree represents a part of the document, like elements, attributes, or text.
+  - The DOM tree is a hierarchical representation of an HTML or XML document.
+  - It consists of a root node (the document itself) and child nodes representing elements, attributes, and text content.
+
  ✓ Event Listener
+  - The Event Listener in web development is a mechanism that allows you to listen for specific events,
+    such as user interactions (like clicks, mouse movements, key presses) or system events (like page load, window resize).
+  - When an event occurs, a function or callback is triggered to respond to that event.
+
  ✓ Closure
+  - Closures in JavaScript are a powerful feature that allows functions to retain access to variables from their containing scope.
+  - Understanding closures is essential for writing clean, efficient, and maintainable JavaScript code.
+
  ✓ Scope and types of scope
- ✓ Hoisting
+  - Scope refers to the visibility and accessibility of variables, objects, and functions within different parts of the code
+    - Global Scope: Global variables are accessible from anywhere in the code, including inside functions, conditional statements,
+                    and loops.
+    - Function Scope: They are only accessible within the function in which they are declared.
+    - Block Scope: Variables declared with let and const have block scope, meaning they are only accessible within the block in which they are defined.             
+
  ◦ Array methods
- ◦ Array cloning
- ◦ Spread operator
- ◦ Map, for each and reduce()
- ◦ Filter 
- ◦ Callback
+  - Some of the most commonly used array methods include push(), pop(), shift(), unshift(), concat(), join(), slice(), splice(), map(), filter(), reduce(),
+     and forEach().
  ◦ String methods
+  - Most commonly used string methods include charAt(), charCodeAt(), concat(), includes(), indexOf(), slice(), toUpperCase(), toLowerCase(),
+    trim(), and replace(). 
+ ◦ Array cloning
+  - Using the Spread Operator (...) ,Using the slice() Method ,Using the concat() Method,Using the Array.from() Method 
+
+ ◦ Callback
+  - A function that is passed as an argument to another function and is executed after a specific task is completed. 
  ◦ Callback hell
+  - Callback hell, also known as the "pyramid of doom," is a common issue in JavaScript programming that arises when multiple 
+    nested callbacks are used, leading to code that is difficult to read, maintain, and debug.
+  - This situation occurs when asynchronous operations are chained together, resulting in deeply nested callback functions within each other.
+
  ◦ Currying
+  - Currying in JavaScript is a functional programming technique where a function with multiple arguments is transformed into a sequence of nested functions,
+    each taking a single argument.
+  - This process allows for partial application of functions and creates higher-order functions
+
  ◦ Memoization
+  - Memoization is a technique used in computer science to optimize the performance of functions by caching the results of expensive function calls
+    and returning the cached result when the same inputs occur again.
+  - This can help reduce redundant computations and improve the overall efficiency of the program.
+  
  ◦ Promise , promise methods
+  - Promises in JavaScript are objects representing the eventual completion or failure of an asynchronous operation.
+  - They provide a cleaner and more structured way to handle asynchronous code compared to traditional callback functions. 
+
+     - Promise.resolve(): Creates a resolved promise with a given value.
+     - Promise.reject(): Creates a rejected promise with a given reason for rejection.
+     - Promise.all(): Takes an iterable of promises and returns a single Promise that resolves when all of the promises have resolved.
+     - Promise.race(): Takes an iterable of promises and returns a single Promise that resolves or rejects as soon as one of the promises resolves or rejects.
+     - Promise.then(): Attaches callbacks for the resolution and rejection of the Promise.
+     - Promise.catch(): Attaches a callback for only the rejection of the Promise.
+     - Promise.finally(): Attaches a callback that is executed when the Promise is settled, whether it is fulfilled or rejected.
+
  ◦ Arrow function
+  - Arrow functions in JavaScript are a concise way to write function expressions.
+  - They provide a more compact syntax compared to traditional function expressions and come with some semantic differences and limitations in usage.
+
  ◦ Types of conversion - int, parse
- ◦ Conditional statement
+  - Implicit Conversion: Also known as automatic type conversion, this occurs when JavaScript automatically 
+                         converts one data type to another to perform an operation.
+  - Explicit Conversion: Also known as manual type conversion, this involves converting data types as per specific
+                         needs using built-in methods or functions.                      
+     
  ◦ Prototype
- ◦ Instance()
+  - The prototype is a fundamental concept related to how objects inherit properties and methods from other objects.
+  - Every object in JavaScript has a prototype, which is itself an object.
+  - When you try to access a property or method of an object, and it's not found in the object itself, 
+    JavaScript looks for it in the object's prototype and continues up the prototype chain until it reaches the end.
+
  ◦ Class , object, object methods
+  - A class is a blueprint for creating objects with similar properties and methods.
+  - It defines the structure and behavior that the objects will have.
+  - Objects are instances of classes, and they inherit the properties and methods defined in the class.
+
  ◦ Object destructuring
+  - Object destructuring in JavaScript is a convenient way to extract multiple properties from an object and assign them to variables.
+
  ◦ Variable typing
- ◦ Event Loop
- ◦ Call stack
- ◦ Global Execution context
+  - Variable typing in JavaScript refers to the way data types are handled when working with variables. 
+  - JavaScript is a dynamically typed language, which means that variables are not bound to a specific data type.
+  - Instead, the data type of a variable is determined at runtime based on the type of value it holds
+
  ◦ Rest 
+  - The rest operator is used to collect the remaining arguments into an array. 
+  - It is used in function parameters to gather all the remaining parameters into a single array.
+
  ◦ Spread 
+  - Spread operator is used to expand an iterable (such as an array, object, or string) into individual elements. 
+  - It is used in function calls or array literals to spread the elements of an iterable.
+
  ◦ Call 
  ◦ Apply 
  ◦ Bind
- ◦ Shadowing
- ◦ This
+ ◦ Shadowing 
+  - It occurs when a variable declared within a certain scope has the same name as a variable in an outer scope, effectively 
+    "shadowing" the outer variable within that inner scope.
+
  ◦ IIFE
- > undifined vs not difined vs null
+  - An Immediately Invoked Function Expression (IIFE) is a JavaScript function that is defined and executed immediately after its creation.
+  - IIFEs are commonly used to create private scopes, prevent variable name collisions, and encapsulate code.
+  - They are particularly useful for maintaining data privacy and avoiding global scope pollution.
+
  > fisrt class fn
- > post and pre increment
+  - In JavaScript, functions are first-class citizens, which means they can be:
+
+      - Assigned to variables
+      - Passed as arguments to other functions
+      - Returned from other functions
+      - Stored in data structures
+
  > bracket notation
- > template literals
+  - // Accessing properties using dot notation
+       console.log(person.name); // Output: "Alice"
+  - // Accessing properties using bracket notation
+       console.log(person["name"]); // Output: "Alice"
+
  > try catch
+  - The try...catch statement in JavaScript is used to handle exceptions (errors) that occur within a block of code. 
+  - It allows you to define a block of code to be tested for errors while providing a way to handle the error if one occurs.
+
  > pure order fn
- > session vs local vs cookies
+  - emphasizing predictability, testability, and the absence of side effects. 
+  - By adhering to the principles of pure functions, developers can write more robust and maintainable code.
+
  > call by value vs call by refrence
+  - In call by value, a copy of the actual parameter's value is passed to the function.
+  - The function works with this copy, and any modifications made to the parameter inside the function do not affect the original value.
+  
+  - In call by reference, a reference to the actual parameter is passed to the function.
+  - This means that the function can directly modify the original parameter, and any changes made inside the function are reflected in the original value.
+
  > recursive fn
+  - A recursive function is a function that calls itself within its own definition.
+  - This technique is commonly used in programming to solve problems that can be broken down into smaller, similar sub-problems.
+
  > primitive and non primitive
- > temporal dead zone
- > higher order fn
- > async await 
+  - Primitive data types are the most basic data types available in a programming language.
+  - They are predefined by the language and directly operate on the actual values.
+    - Numbers (e.g., integers, floating-point numbers)
+    - Strings (sequences of characters)
+    - Booleans (true or false)
+    - Undefined (a variable that has been declared but not assigned a value)
+    - Null (represents the intentional absence of any object value)
+    - Symbols (unique and immutable data type introduced in ECMAScript 6)
+
+  - Non-primitive data types are more complex data types that are created by the programmer and are not defined by the programming language itself.
+    - Objects (collections of key-value pairs)
+    - Arrays (ordered collections of values)
+    - Functions (blocks of reusable code)
+    - Dates (representing dates and times)
+    - Any other object that is not of a primitive type  
+
+ > Temporal dead zone
+  - The temporal dead zone (TDZ) is a specific period in the execution of JavaScript code where variables declared with let and const exist
+    but cannot be accessed or assigned any value.
+  - During this phase, accessing or using the variable will result in a ReferenceError.
+
+ > Higher order fn
+  - HigherOrderFunction is a higher-order function that takes callbackFunction as an argument and executes it within its body. 
+  - This allows for dynamic behavior where different functions can be passed to higherOrderFunction to achieve different results.
+
  > this keyword
- > concat
- > identifier
+  - this refers to the object that the method is attached to, allowing the same method to be reused on different objects.
+ 
  > escape seaquence
- > 
+  - Escape sequences are essential for handling special characters and formatting in code
+     - \n: Newline
+     - \t: Tab
+     - \\: Backslash
+     - \": Double quote
+     - \': Single quote
 
 Node, Express
 
