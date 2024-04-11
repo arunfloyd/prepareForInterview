@@ -3,7 +3,7 @@ const fs = require("fs");
 
 http.createServer((req, res) => {
   if (req.url === "/") {
-    fs.writeFileSync("fsModuleWithHttp.txt",""+ Date.now().toLocaleString());
+    fs.writeFileSync("fsModuleWithHttp.txt"," Hello"+ Date.now());
     fs.readFile("fsModuleWithHttp.txt", (err, data) => {
         console.log(data)
       res.writeHead(200);

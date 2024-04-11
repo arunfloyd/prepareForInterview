@@ -155,6 +155,7 @@ Mongo DB
    - This method allows you to update a single document based on specified criteria and retrieve either the original or updated document.
 
  ◦ Replication :
+
   - The process of synchronizing data across multiple servers to ensure high availability, fault tolerance, and data redundancy.
   - It involves maintaining multiple copies of data on different servers, known as replica set members, 
     to provide resilience against hardware failures and to enable read scaling.
@@ -165,6 +166,7 @@ Mongo DB
     where one of the secondary nodes is automatically elected as the new primary node to ensure continuous operation.
 
  ◦ Aggregation :
+
   - Aggregation in MongoDB is a powerful feature that allows you to process and analyze data across multiple documents in a collection.
   - It involves using aggregation pipelines to perform operations such as grouping, filtering, sorting, and transforming data to generate meaningful results
     * An aggregation pipeline is a series of stages that process documents.
@@ -186,6 +188,7 @@ Mongo DB
   - Fetching and processing query results in MongoDB, providing a flexible and efficient way to work with large datasets and perform data operations.
 
  > upsert
+
   - Upsert is a database operation that combines the actions of insert and update.
   - When performing an upsert operation, the system will insert a new document if no matching document is found based on a specified filter criteria
   - Eg:
@@ -196,6 +199,7 @@ Mongo DB
        ) 
    
  > CAP theorem
+
   - In distributed systems that states that it is impossible for a distributed data store to simultaneously provide more than two out of the
     following three guarantees:
     - Consistency: All nodes in the system have the same data at the same time.
@@ -203,10 +207,12 @@ Mongo DB
     - Partition Tolerance: The system's ability to function and maintain data consistency even when network partitions occur.
 
  > Views
+
   - Is a read-only queryable object whose contents are defined by an aggregation pipeline on other collections or views.
   - They provide a way to create a virtual collection that presents the results of the aggregation pipeline as a collection. 
 
  > Embedded object :
+
   - Embedded object refers to a document or subdocument that is nested within another document. 
 
  > allowdiskuse :
@@ -256,21 +262,25 @@ Javascript
 
 
  ✓ DOM
+
   - The DOM is a programming interface that represents the structure of a document, such as HTML, as a tree of objects.
   - Each node in the tree represents a part of the document, like elements, attributes, or text.
   - The DOM tree is a hierarchical representation of an HTML or XML document.
   - It consists of a root node (the document itself) and child nodes representing elements, attributes, and text content.
 
  ✓ Event Listener
+
   - The Event Listener in web development is a mechanism that allows you to listen for specific events,
     such as user interactions (like clicks, mouse movements, key presses) or system events (like page load, window resize).
   - When an event occurs, a function or callback is triggered to respond to that event.
 
  ✓ Closure
+
   - Closures in JavaScript are a powerful feature that allows functions to retain access to variables from their containing scope.
   - Understanding closures is essential for writing clean, efficient, and maintainable JavaScript code.
 
  ✓ Scope and types of scope
+
   - Scope refers to the visibility and accessibility of variables, objects, and functions within different parts of the code
     - Global Scope: Global variables are accessible from anywhere in the code, including inside functions, conditional statements,
                     and loops.
@@ -278,32 +288,43 @@ Javascript
     - Block Scope: Variables declared with let and const have block scope, meaning they are only accessible within the block in which they are defined.             
 
  ◦ Array methods
+
   - Some of the most commonly used array methods include push(), pop(), shift(), unshift(), concat(), join(), slice(), splice(), map(), filter(), reduce(),
      and forEach().
+
  ◦ String methods
+
   - Most commonly used string methods include charAt(), charCodeAt(), concat(), includes(), indexOf(), slice(), toUpperCase(), toLowerCase(),
     trim(), and replace(). 
+
  ◦ Array cloning
+
   - Using the Spread Operator (...) ,Using the slice() Method ,Using the concat() Method,Using the Array.from() Method 
 
  ◦ Callback
+
   - A function that is passed as an argument to another function and is executed after a specific task is completed. 
+
  ◦ Callback hell
+
   - Callback hell, also known as the "pyramid of doom," is a common issue in JavaScript programming that arises when multiple 
     nested callbacks are used, leading to code that is difficult to read, maintain, and debug.
   - This situation occurs when asynchronous operations are chained together, resulting in deeply nested callback functions within each other.
 
  ◦ Currying
+
   - Currying in JavaScript is a functional programming technique where a function with multiple arguments is transformed into a sequence of nested functions,
     each taking a single argument.
   - This process allows for partial application of functions and creates higher-order functions
 
  ◦ Memoization
+
   - Memoization is a technique used in computer science to optimize the performance of functions by caching the results of expensive function calls
-    and returning the cached result when the same inputs occur again.
+    and returning the cached result when the same inputs occur again.t
   - This can help reduce redundant computations and improve the overall efficiency of the program.
   
  ◦ Promise , promise methods
+
   - Promises in JavaScript are objects representing the eventual completion or failure of an asynchronous operation.
   - They provide a cleaner and more structured way to handle asynchronous code compared to traditional callback functions. 
 
@@ -352,9 +373,6 @@ Javascript
   - Spread operator is used to expand an iterable (such as an array, object, or string) into individual elements. 
   - It is used in function calls or array literals to spread the elements of an iterable.
 
- ◦ Call 
- ◦ Apply 
- ◦ Bind
  ◦ Shadowing 
   - It occurs when a variable declared within a certain scope has the same name as a variable in an outer scope, effectively 
     "shadowing" the outer variable within that inner scope.
@@ -398,6 +416,7 @@ Javascript
   - This technique is commonly used in programming to solve problems that can be broken down into smaller, similar sub-problems.
 
  > primitive and non primitive
+ 
   - Primitive data types are the most basic data types available in a programming language.
   - They are predefined by the language and directly operate on the actual values.
     - Numbers (e.g., integers, floating-point numbers)
