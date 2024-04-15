@@ -1,4 +1,4 @@
-function whoIsGreater(a, b) {
+ function whoIsGreater(a, b) {
   let Car = new Promise((resolve, reject) => {
     if (a > b) {
       resolve("First");

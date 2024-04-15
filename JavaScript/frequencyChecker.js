@@ -8,4 +8,9 @@ for (let i of array) {
     count[i] = 1;
   }
 }
-console.log(count);
+// Find elements with count 1
+const elementsWithCountOne = Object.keys(count).filter(
+  (key) => count[key] === 1
+);
+
+console.log(elementsWithCountOne);

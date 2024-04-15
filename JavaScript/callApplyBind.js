@@ -1,7 +1,10 @@
+const { name } = require("ejs");
+
 /// CALL METHOD
 const obj = {
   name: "Arun",
 };
+
 function welcome() {
   return `Hello ${this.name}`;
 }
@@ -23,3 +26,7 @@ function nasmaste(greeting) {
 }
 const wel = nasmaste.bind(object);
 console.log(wel("Good Mrng"));
+
+
+
+

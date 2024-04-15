@@ -281,7 +281,8 @@ Javascript
 
  ✓ Scope and types of scope
 
-  - Scope refers to the visibility and accessibility of variables, objects, and functions within different parts of the code
+  - Scope refers to the visibility and accessibility of variables, objects, and functions within different parts of the code.
+
     - Global Scope: Global variables are accessible from anywhere in the code, including inside functions, conditional statements,
                     and loops.
     - Function Scope: They are only accessible within the function in which they are declared.
@@ -320,7 +321,7 @@ Javascript
  ◦ Memoization
 
   - Memoization is a technique used in computer science to optimize the performance of functions by caching the results of expensive function calls
-    and returning the cached result when the same inputs occur again.t
+    and returning the cached result when the same inputs occur again.
   - This can help reduce redundant computations and improve the overall efficiency of the program.
   
  ◦ Promise , promise methods
@@ -379,7 +380,7 @@ Javascript
 
  ◦ IIFE
   - An Immediately Invoked Function Expression (IIFE) is a JavaScript function that is defined and executed immediately after its creation.
-  - IIFEs are commonly used to create private scopes, prevent variable name collisions, and encapsulate code.
+  - IIFE's are commonly used to create private scopes, prevent variable name collisions, and encapsulate code.
   - They are particularly useful for maintaining data privacy and avoiding global scope pollution.
 
  > fisrt class fn
@@ -391,8 +392,10 @@ Javascript
       - Stored in data structures
 
  > bracket notation
+
   - // Accessing properties using dot notation
        console.log(person.name); // Output: "Alice"
+       
   - // Accessing properties using bracket notation
        console.log(person["name"]); // Output: "Alice"
 
