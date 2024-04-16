@@ -119,8 +119,10 @@
 -> this
 -> Promises in JS 
 -> Callback hell 
+-> Pure functions
+-> 
 
-// React JS 
+f// React JS 
 
 -> What is ReactJS and how it differ from other JS frameworks
 -> Concept of virtual document
@@ -135,6 +137,65 @@
 -> React Router Work and how to handle routing
 -> What is Redux and how it manages
 -> Purpose of React Hooks
+-> Concept Conditional rendering 
+-> Controlled and uncontrolled Component in react from
+-> Promises in ReactJS
+-> Prop in React , Prop function ,Prop Drilling
+-> Diff b/w Functional Component and Class based Component
 
 
-1:09:43 
+// Angular JS
+
+-> What is Angular JS and how it differ from Angular
+-> Two way data binding Ajs
+-> Dependency injection in Ajs
+-> Define routes 
+-> Directive,and how you create it
+-> Role of services
+-> Controller, how do you Define it
+-> Digest cycle works in Angular JS
+-> Concept Of scope
+-> Filters 
+-> Make HTTP request 
+-> Purpose of ng-repeat 
+-> Directive like ng-if ,ng-show,ng-hide
+-> Angular Module ,uses
+-> How it handle security 
+-> Angular framework or library
+-> Directive and a services in Ajs
+
+
+// Tailwind CSS
+
+-> What is Tailwind CSS
+-> Tailwind CSS differ from traditional CSS framework like Bootstrap
+-> How to install it
+-> Concept of Utility-first Approach 
+-> What is the purpose of Tailwind.config.js file
+-> Add coustom style 
+-> JIT in Tailwind
+-> Purging CSS in Tailwind CSS 
+-> hower and focus 
+-> Responsive Variants
+-> Third party plugins 
+-> handle browser compatibility
+-> performance optimization 🔥Techniques 
+-> Can its use with other framework
+
+// Bootstrap
+
+-> What is it , why it used
+-> Responsive web design and how it acheive
+-> How do you include into it
+-> Grid system of Bootstrap
+-> Components of Bootstrap
+-> container v/s container-fluid
+-> Bootstrap Thems and how it uses
+-> Modals and their uses
+-> Handle browser compatibility
+-> Purpose of bootstrap navigation Components
+-> Utility Classes
+-> How bootstrap handle mobile first design
+-> Tooltips
+-> Bootstrap responsive class works
+-> f
