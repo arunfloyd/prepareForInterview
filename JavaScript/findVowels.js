@@ -19,3 +19,13 @@ function vowels(str) {
   console.log(arr);
 }
 vowels(str);
+
+// Remove Vowels
+
+function removeVowels(inputString) {
+  const vowels = /[aeiou]/i;
+  return inputString.replace(vowels, "");
+}
+console.log(removeVowels("Ice cream"));
+
+

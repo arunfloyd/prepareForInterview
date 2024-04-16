@@ -62,7 +62,7 @@
 
 
 
-// Intellipaat Questions Air
+//\\ Intellipaat Questions Air
 
 //HTML
 
@@ -198,4 +198,7 @@ f// React JS
 -> How bootstrap handle mobile first design
 -> Tooltips
 -> Bootstrap responsive class works
--> f
+
+
+?? Create A Timer
+-- Start , End ,Pause,Resume 
