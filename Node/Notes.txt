@@ -1,0 +1,302 @@
+Node, Express
+
+ ◦ NodeJS :
+
+   - Node.js is an open-source, cross-platform JavaScript runtime environment that enables developers to build scalable
+     network applications.
+   
+   - It utilizes an asynchronous, event-driven architecture, allowing for efficient handling of multiple connections 
+     concurrently without blocking the process.  
+
+   - Commonly used for server-side applications, web frameworks, and command-line tools, offering features like asynchronous programming, 
+     dynamic content generation, file operations, form data handling, and database interactions  
+ 
+ ◦ExpressJS :
+
+   - Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for 
+     building web and mobile applications.
+   
+   - Simplifies the process of handling HTTP requests, routing, middleware integration, and rendering dynamic content.  
+
+  ◦ Patch & put
+
+   - GET: The GET method is used to retrieve data from the server.
+          It is a read-only method, meaning it does not change or mutate data on the server.
+          GET requests are safe and idempotent, making them suitable for fetching data. 
+
+   - POST: POST is used to create new resources on the server.
+           It is commonly used to create subordinate resources under a parent resource.
+           POST requests are not idempotent and are suitable for non-idempotent operations    
+
+   - PUT: PUT is primarily used for updating existing resources on the server.
+          When making a PUT request, the entire resource is replaced with the new representation provided in the request body.
+          PUT requests are idempotent but not safe    
+
+   - PATCH: PATCH is used to modify existing resources by sending a set of instructions describing how the resource should
+            be changed.
+            Unlike PUT, PATCH does not require sending the entire resource representation, only the changes.
+            PATCH requests are not idempotent. 
+
+   - DELETE: The DELETE method is used to delete a specific resource identified by its URI.
+             It removes the resource from the server.
+             DELETE requests are idempotent, meaning multiple calls to delete the same resource will have the same result    
+
+ ◦ Idempotence : 
+
+   - Idempotence is a property of certain operations or API requests that ensures repeating the operation multiple times
+     will yield the same result as if it was executed only once.
+   - This principle is especially vital in distributed systems and APIs, as it helps maintain consistency and
+     predictability in situations such as network issues, request retries, or duplicated requests.  
+
+       - GET, PUT, DELETE, HEAD, OPTIONS, and TRACE are idempotent.
+       - POST and PATCH are generally non-idempotent.  
+
+ ◦ Option Method :
+
+   - OPTIONS method is used to query a server about the HTTP methods and other options that are supported for a specific resource.
+
+   - It is a useful tool for clients to understand the capabilities of a server and to make informed requests.
+      Eg:  
+           Here is an example of an OPTIONS request:
+           OPTIONS /resource HTTP/1.1
+           Host: example.com
+
+           And a possible response from the server:
+           HTTP/1.1 200 OK
+           Allow: GET, POST, PUT, DELETE
+
+ ◦ Middlewares
+
+  - Middleware functions are essential components that have access to the request object (req), the response object (res),
+    and the next middleware function in the application's request-response cycle.
+     * Types :
+       - Application-level Middleware
+           - CORS Middleware
+           - Authentication Middleware
+       - Router-level Middleware
+       - Error-handling Middleware
+       - Built-in Middleware
+       - Third-party Middleware 
+
+ ◦ Set-immediate
+    - The setImmediate function is used to schedule the immediate execution of a callback after the I/O events callbacks 
+      and before setTimeout and setInterval.
+
+      Eg:- setImmediate(() => {
+           console.log('This will be executed in the next iteration of the event loop');
+           });
+
+ ◦ Events :
+
+  - Events in Node.js are a fundamental part of its asynchronous, event-driven architecture.
+  - In Node.js, every action is considered an event, such as when a connection is made or a file is opened.
+  - Objects in Node.js can emit events, and developers can create, fire, and listen for their own events using 
+    the built-in "Events" module.
+ 
+ ◦ Session and cookie :
+
+  - Session and cookie management are essential aspects of web development, particularly when building stateful
+    and secure web applications.
+    Both sessions and cookies are used to maintain user state and identity across multiple requests 
+    and are integral to user authentication, personalization, and tracking.
+
+     - Cookies: : Cookies are small pieces of data stored on the client-side (user's browser) by websites. 
+                  They are sent by the server and stored on the client's machine to track user activity,
+                   remember user preferences, and maintain session information.
+
+     - Sessions : Sessions are server-side storage mechanisms that store user data during a user's interaction with a website.
+                  Each session is assigned a unique identifier (session ID) that is typically stored in a cookie on the client-side.               
+
+ ◦ View engine
+
+  - A view engine is a templating engine that allows you to generate dynamic HTML content by combining static templates with data.
+  - Express supports various view engines like EJS, Pug (formerly Jade), Handlebars, and Mustache.
+
+ ◦ Status code
+  - A status code in the context of web development refers to a three-digit numeric code that is sent by a server in response to a client's request.
+
+     - 1xx: Informational responses
+     - 2xx: Success responses
+     - 3xx: Redirection responses
+     - 4xx: Client error responses
+     - 5xx: Server error responses
+
+ ◦ Cors in detail :
+
+  - Cross-Origin Resource Sharing, is a security feature implemented in web browsers to control how web pages or web applications on one domain
+    can access resources from another domain.
+  - It is a critical security mechanism that helps prevent unauthorized access to resources and protects against cross-site request forgery (CSRF) attacks.
+ 
+ ◦ Body parser : 
+
+  - Body parser is a middleware module for Node.js that is used to parse incoming request bodies in a middleware
+    before your handlers, available under the req.body property.
+  - It simplifies the process of handling data sent in HTTP requests by parsing the request body 
+    and populating the req.body object with the parsed data.
+
+ ◦ Morgan
+
+  - Morgan is a popular HTTP request logger middleware for Node.js.
+  - It provides a simple and flexible way to log HTTP requests and responses in Node.js applications.
+  - By using Morgan, developers can easily log requests made to their Node.js server, including information 
+    such as the request method, URL, status code of the response, and the length of the response body
+
+ ◦ NPM
+  - NPM plays a crucial role in the Node.js ecosystem, providing a centralized repository for packages 
+    and tools that enhance the development experience for Node.js developers.
+
+ ◦ PM2 
+  - PM2 is a popular process manager for Node.js applications that simplifies process management, 
+    monitoring, and deployment in production environments.
+  - It provides a robust set of features to ensure that Node.js applications run smoothly and efficiently.
+
+ ◦ Postman
+  - Postman is a popular collaboration platform for API development that simplifies the process of designing,
+    testing, and documenting APIs.
+  - It provides a user-friendly interface for sending HTTP requests, testing API endpoints, and managing API collections.
+ 
+ ◦ Types of errors
+
+  - Syntax Errors 
+  - Runtime Errors
+  - Logical Errors
+
+ ◦ app.use
+
+  - The app.use function in Express is a fundamental part of setting up middleware for handling requests.
+  - It is used to mount the specified middleware function or functions at the specified path.
+  - This function can take various forms, allowing for flexibility in how middleware is applied to the application
+
+ ◦ MVC
+
+  - MVC (Model-View-Controller) is a software architecture pattern commonly used in web development to organize 
+    and structure applications.
+
+ ◦ Child process
+
+  - Child processes in Node.js are a powerful feature that allows developers to spawn and manage subprocesses,
+    enabling parallel execution of tasks and interaction with external processes.
+  - The child_process module in Node.js provides a range of methods for creating and interacting with child processes,
+    including spawn, exec, execFile, and fork.
+
+  - The child_process.spawn() method is commonly used to launch a new process, providing options for passing arguments
+    and interacting with the standard input/output streams of the child process.
+  - This method is asynchronous and does not block the Node.js event loop, making it suitable for non-blocking operations.
+
+ > node,why
+
+  - Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to execute JavaScript
+    code outside of a web browser.
+  - It is built on Google Chrome's V8 JavaScript engine and is designed to be lightweight, efficient, and scalable.
+  - Node.js is widely used for server-side programming and is particularly well-suited for building networked
+    and real-time applications.
+ 
+ > modules
+  - modules are a fundamental aspect of structuring and organizing code.
+   They allow developers to encapsulate functionality into reusable units, making it easier to manage
+   and maintain complex applications.
+    - Built-in Modules: http, fs, and path
+    - Local Modules : custom modules created by developers
+    - Third-party Modules : Npm , yarn
+
+ > node global object
+
+  - The global object in Node.js is similar to the window object in web browsers, but it is specific to the Node.js environment.
+  - It provides access to global properties, such as process, console, Buffer, and require, 
+    as well as global functions like setTimeout, clearTimeout, setInterval, and clearInterval.
+
+ > json
+  - JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read 
+    and write and easy for machines to parse and generate.
+  - It is based on a subset of the JavaScript programming language and is commonly used for transmitting data between a server and
+    a web application as an alternative to XML.
+
+ > streams: 
+
+  - Streams in Node.js are a fundamental concept that allows developers to work with streaming data efficiently.
+  - A stream is an abstract interface for working with streaming data in Node.js, and it provides a way to handle data 
+    piece by piece or in chunks,rather than loading the entire dataset into memory at once.
+      
+      - Readable: Streams from which data can be read.
+      - Writable: Streams to which data can be written.
+      - Duplex: Streams that are both Readable and Writable.
+      - Transform: Duplex streams that can modify or transform the data as it is written and read. 
+
+ > techniques used for streams(piping and chaining)
+  - Piping involves connecting the output of one stream to the input of another stream, creating a data flow pipeline.
+  - Piping simplifies the process of transferring data between streams without manually handling data chunks and buffering.
+
+  - Chaining involves connecting multiple streams in a sequence to create a chain of stream operations.
+  - Chaining allows for complex data processing workflows by connecting streams one after another.
+
+ > libuv
+  - Libuv is a multi-platform support library in C that provides asynchronous I/O operations, networking,
+    and other fundamental functionalities for Node.js.
+  - It serves as the underlying technology that enables Node.js to achieve its asynchronous and event-driven nature, 
+    allowing for efficient handling of I/O operations without blocking the main thread.
+
+ > api
+  - Application Programming Interface, is a set of rules and protocols that allows different software applications to communicate with each other.
+  - APIs define the methods and data formats that applications can use to request and exchange information.
+  
+ > logger 
+  - Logging is a crucial aspect of software development, especially in Node.js applications, to track and monitor 
+    the behavior of the application.
+  - A logger is a component or module used to record events, errors, and other information during the execution of a program.
+  - It helps developers troubleshoot issues, analyze performance, and gain insights into the application's behavior. 
+
+ > https 
+  - Module provides functionality to create secure HTTPS servers and make secure HTTPS requests.
+  - It is an essential part of building secure web applications and APIs in Node.js.
+
+ > nodemon
+  - Nodemon is a command-line interface (CLI) utility for Node.js that is designed to automatically restart Node.js applications 
+    when file changes are detected.
+  - This eliminates the need to manually stop and restart the server each time changes are made to the code,
+    which can significantly improve the development workflow.
+
+ > thread pool
+  - The thread pool in Node.js plays a crucial role in offloading synchronous and heavy-duty tasks from the main event loop,
+    thereby enhancing the performance, scalability, and responsiveness of Node.js applications.
+
+ > util
+  - In Node.js, the util module provides a set of utility functions that are helpful for various tasks such as debugging, error handling,
+    and working with objects.
+  - It contains several sub-modules and functions that are commonly used in Node.js applications
+
+ > zlib
+
+ - The zlib module provides compression and decompression functionalities through various compression algorithms.
+ - It allows you to work with compressed data streams, which can be useful for reducing file sizes,
+   transmitting data more efficiently over networks,or storing data in a compressed format.
+
+ > payload
+  - The data transmitted over a network or passed between systems as part of a communication protocol.
+  - The payload is the actual content or information being sent, as opposed to the headers, metadata, or other overhead that may accompany it.
+
+ > TLS
+
+  - Transport Layer Security is a cryptographic protocol used to secure communications over a computer network.
+  - It ensures that data transmitted between two parties, such as a client and a server, remains private, authenticated, and tamper-proof.
+  - TLS is the successor to the earlier SSL (Secure Sockets Layer) protocol.
+
+
+> CommonJs
+ - CommonJS module system is the default module system within the NodeJS ecosystem.
+
+> Reverse proxy
+
+ - A reverse proxy is a server that sits between client devices and web servers, forwarding client requests to the appropriate backend servers. 
+ - Work -
+    Load Balancing 
+    Caching 
+    SSL Termination
+    Security
+    URL Rewriting
+ - Popular reverse proxy servers include Nginx, Apache HTTP Server with mod_proxy, HAProxy, and Envoy
+
+> Touch command
+ - The touch command in Unix and Unix-like operating systems is used to create an empty file or update the access and modification timestamps of an existing file. 
+
+> Exec & execFile
+ - exec and execFile functions are used to execute external shell commands or scripts.

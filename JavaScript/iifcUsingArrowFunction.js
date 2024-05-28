@@ -1,4 +1,4 @@
-(function sum() {
+(function () {
   console.log("Hello");
 })();
 

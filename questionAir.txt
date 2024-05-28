@@ -82,7 +82,7 @@
 -> How can you add Comments in HTML 
 -> Purpose of the <img>
 -> Importance of validation in HTML
--> What is diff b/w GET and Position
+-> What is diff b/w GET and Post
 
 // CSS
 
@@ -107,11 +107,11 @@
 
 -> What is JS , and how its differ from Javascript
 -> Diff between null and undefined
--> Diff b/w let,const and vertically
+-> Diff b/w let,const and var
 -> Data types in JS
 -> Events in JS
 -> Diff '==' and '==='
--> Hoisting in JS
+-> Hoisting in JS                                                            
 -> Closures 
 -> Event Loop
 -> Prototypal inheritance works
@@ -120,12 +120,12 @@
 -> Promises in JS 
 -> Callback hell 
 -> Pure functions
--> 
 
-f// React JS 
+
+ // React JS 
 
 -> What is ReactJS and how it differ from other JS frameworks
--> Concept of virtual document
+-> Concept of virtual DOM
 -> Key features of React
 -> JSX in react and how it differ from HTML
 -> Component lifecycle in react

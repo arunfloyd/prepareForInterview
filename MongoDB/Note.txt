@@ -1,0 +1,265 @@
+◦ Mongo DB  -:-:-:- 
+
+◦ Collection :
+    - A collection is a group of documents.
+
+◦ CRUD : f
+     - CRUD operations in MongoDB refer to the basic methods used to interact with a MongoDB database.
+
+        - Create: Insert new documents into the MongoDB database. (insertOne,insertMany)
+        - Read: Query and retrieve documents from the database. (find,aggregate)
+        - Update: Modify existing documents in the database. (updateOne,updateMany,replaceOne)
+        - Delete: Remove documents from the database. (deleteOne,deleteMany)
+
+ ◦ Lookup :
+      - The $lookup stage in MongoDB performs a left outer join to a collection in the same database.
+      - It filters in documents from the "joined" collection for processing.
+
+        - Eg: {
+               $lookup: {
+               from: <collection to join>,
+               localField: <field from the input documents>,
+               foreignField: <field from the documents of the "from" collection>,
+               as: <output array field> or Alias
+               }
+             }
+
+ ◦ Unwind :
+     - Used to deconstruct an array field from the input documents and create a separate output document 
+       for each element in the array
+
+ ◦ In :
+     - Used to select documents where the value of a field equals any value in the specified array.
+       
+       - Syntax : { field: { $in: [<value1>, <value2>, ... <valueN>] } }
+
+       - Eg : db.student.find({language: {$in: ["JavaScript", "CSS"]}}).pretty()
+       - In this example, we are retrieving the data of students working with either JavaScript or CSS.
+
+ ◦ Capped collection :
+      - Capped collections in MongoDB are fixed-size collections that support high-throughput operations based on insertion order.
+
+      * Capped collections automatically remove the oldest documents to make room for new ones.
+      * They have an _id field and an index on the _id field by default.
+      * They do not support updates or document deletions, and you cannot shard a capped collection.
+
+    
+ ◦ Alias :
+      - An Alternative name given to a field in a document within a collection. 
+      - Aliases allow you to create temporary field names within aggregation pipelines without modifying the original document structure.
+
+ ◦ Mongo Utilities
+      - Tools to help developers manage databases, perform operations, and optimize performance
+
+          - mongodump and mongorestore: These utilities are used for creating backups of MongoDB databases and restoring them.
+          - mongoexport and mongoimport: These utilities are used for importing and exporting data in JSON, CSV, or TSV format.
+          - mongostat: This utility provides a quick overview of the status of a MongoDB instance, including metrics like connections,
+                       operations, memory usage, and more.
+
+ ◦ Indexing :
+     - Indexes support efficient execution of queries by allowing MongoDB to limit the number of documents it must scan.
+     - Without indexes, MongoDB would need to scan every document in a collection to return query results.
+     
+            - Single Field Index: Index created on a single field.
+            - Compound Index: Index created on multiple fields.
+            - Multikey Index: Index used to index content stored in arrays.
+            - Geospatial Index : Index created on coordinate system
+
+
+ ◦ Logical operator :
+     - Constructing conditional statements and filtering data based on specific criteria
+
+        - AND 
+          - The and operator is used to combine two or more conditions in a way that all conditions must be true for the overall expression to be true.
+          - Example: if (condition1 && condition2) { // do something }
+        - OR 
+          - The or operator is used to combine two or more conditions in a way that at least one of the conditions must be true for the overall expression to be true. 
+          - Example: if (condition1 || condition2) { // do something }
+        - NOT 
+         - The nor operator is a logical operator that combines two conditions and returns true only if both conditions are false.
+         - Example: if (!(condition1 || condition2)) { // do something }
+        - NOR
+         - The nor operator is a logical operator that combines two conditions and returns true only if both conditions are false.
+         - Example: if (!(condition1 || condition2)) { // do something }
+
+ ◦ Comparison operator : 
+     - Allow developers to compare values within documents and collections to retrieve specific data based on defined criteria.
+
+       - lt (less than): 
+        - Example: db.collection.find({ field: { $lt: value } })
+       - gt (greater than)
+       - eq (equal)
+       - ne (not equal): 
+
+
+ ◦ Namespace :
+     - Namespaces are used to organize and access data efficiently. 
+     - The format of a namespace is <database_name>.<collection_name>
+
+ ◦ addtoSet():
+     - Add a value to an array field if the value is not already present. 
+     - If the value is already in the array, the addToSet operation does not modify the array.
+
+ ◦ Sharding :
+     - Enables efficient data distribution, scalability, and performance in handling large and growing datasets
+
+ ◦ Insert vs save
+    - Insert :
+       - Used to insert a new document or multiple documents into a collection.
+    - Save :
+       - Used to insert a new document or update an existing document in a collection.  
+       - If the document being saved already contains an _id field, the save operation will update the existing document with the same _id.
+
+ ◦ BSON
+    - It stands for Binary JSON, is a binary-encoded serialization of JSON-like documents used in MongoDB and other systems.
+    - It is designed to be lightweight, traversable, and efficient for storage and data exchange.
+
+ ◦ Data type
+    - String: Used to store textual data.
+    - Integer: Represents whole numbers.
+    - Double: Represents floating-point numbers.
+    - Boolean: Stores true or false values.
+    - Date: Represents date and time values.
+    - Array: Stores an ordered list of values.
+    - Object: Represents embedded documents.
+    - Null: Represents a null value.
+    - Binary Data: Stores binary data.
+    - ObjectId: A unique identifier for documents.
+    - Timestamp: Stores timestamp values.
+    - Decimal128: Represents decimal numbers.
+    - Min Key: Represents the smallest possible value.
+    - Max Key: Represents the largest possible value.
+
+ ◦ Update operators
+    - Set :
+       - The $set operator is used to update the value of a field or create a new field if it does not exist.
+    - Unset :
+       - The $unset operator is used to remove a field from a document.
+    - Inc : 
+       - The $inc operator is used to increment the value of a field by a specified amount.
+   
+ ◦ Distinct :
+    - Find the unique values for a specified field across a single collection
+
+ ◦ Accumulators :
+   - To maintain state as documents progress through the pipeline. Eg:- max min sum avg
+
+ ◦ Count :
+   - To determine the number of documents that match a specified query within a collection
+
+ ◦ Out :
+   - Used in the context of the aggregation framework to specify the destination collection where the results
+     of an aggregation operation should be written to.
+   - It allows the results of an aggregation pipeline to be stored in a new or existing collection.
+
+ ◦ findOneAndUpdate : 
+   - This method allows you to update a single document based on specified criteria and retrieve either the original or updated document.
+
+ ◦ Replication :
+
+  - The process of synchronizing data across multiple servers to ensure high availability, fault tolerance, and data redundancy.
+  - It involves maintaining multiple copies of data on different servers, known as replica set members, 
+    to provide resilience against hardware failures and to enable read scaling.
+  - A replica set is a group of MongoDB servers that maintain the same data set, with one primary node and multiple secondary nodes. 
+  - The primary node is the main read-write node that receives all write operations and replicates the data to the secondary nodes.
+  - Secondary nodes are read-only copies of the data that replicate changes from the primary node. 
+  - In the event of a primary node failure, replica sets support automatic failover, 
+    where one of the secondary nodes is automatically elected as the new primary node to ensure continuous operation.
+
+ ◦ Aggregation :
+
+  - Aggregation in MongoDB is a powerful feature that allows you to process and analyze data across multiple documents in a collection.
+  - It involves using aggregation pipelines to perform operations such as grouping, filtering, sorting, and transforming data to generate meaningful results
+    * An aggregation pipeline is a series of stages that process documents.
+    - Common stages include $match, $group, $sort, $project, $limit, and $lookup.
+    * MongoDB provides a wide range of aggregation operators to perform specific tasks within the pipeline.
+    - Operators like $sum, $avg, $group, $match, $project, and $sort are commonly used for aggregation operations.
+
+ > Sql vs No-Sql
+  * SQL Databases: 
+  - SQL, or Structured Query Language, is a language used to manage and manipulate data in relational database management systems (RDBMS). 
+  - SQL databases are based on a structured schema, typically using tables with rows and columns,
+    and are known for their ability to handle complex queries and transactions
+  * NoSQL Databases: 
+  - NoSQL databases, on the other hand, are non-relational databases that offer more flexibility in handling unstructured and semi-structured data.
+  - They are designed to scale horizontally and are often used in modern, distributed systems.
+
+ > Cursor
+  - In MongoDB, when you perform a read operation using methods like db.collection.find(), the result is returned as a cursor.
+  - Fetching and processing query results in MongoDB, providing a flexible and efficient way to work with large datasets and perform data operations.
+
+ > upsert
+
+  - Upsert is a database operation that combines the actions of insert and update.
+  - When performing an upsert operation, the system will insert a new document if no matching document is found based on a specified filter criteria
+  - Eg:
+       db.collection.updateOne(
+       { name: "Alice" }, // Filter criteria
+       { $set: { age: 30 } }, // Update operation
+       { upsert: true } // Upsert option
+       ) 
+   
+ > CAP theorem
+
+  - In distributed systems that states that it is impossible for a distributed data store to simultaneously provide more than two out of the
+    following three guarantees:
+    - Consistency: All nodes in the system have the same data at the same time.
+    - Availability: The ability of the system to respond to requests even in the presence of faults.
+    - Partition Tolerance: The system's ability to function and maintain data consistency even when network partitions occur.
+
+ > Views
+
+  - Is a read-only queryable object whose contents are defined by an aggregation pipeline on other collections or views.
+  - They provide a way to create a virtual collection that presents the results of the aggregation pipeline as a collection. 
+
+ > Embedded object :
+
+  - Embedded object refers to a document or subdocument that is nested within another document. 
+
+ > allowdiskuse :
+  - Method to allow the aggregation pipeline to write data to temporary files on disk if the pipeline stages consume more than 100 megabytes of RAM.
+
+ > vertical and horizontal scaling
+  * Vertical Scaling (Scaling Up): 
+   - Vertical scaling involves increasing the capacity of a single server or node by adding more resources, such as CPU, memory, or storage, to the existing system.
+  * Horizontal Scaling (Scaling Out):
+   - Horizontal scaling involves adding more nodes or servers to a system to distribute the load and increase capacity.
+   
+ > atlas
+  - MongoDB Atlas simplifies the process of managing MongoDB databases in the cloud, providing a reliable and scalable solution
+    for modern applications that require a flexible and robust database infrastructure.
+
+ > trigger
+  - Trigger is a piece of server-side logic that automatically responds to specific database events, such as when a document is inserted, updated, or removed.
+  - Triggers can be used to implement complex data interactions and automate tasks based on changes in the database.
+  - They are commonly used to enforce data consistency, perform data validation, and execute custom business logic in response to database events.
+
+ > GridFS
+  - GridFS is a specification for storing and retrieving large files in MongoDB.
+  - It is a way to store files that exceed the BSON document size limit of 16 MB by dividing them into smaller chunks
+    and storing each chunk as a separate document in a collection.
+  - GridFS is commonly used for storing and managing files such as images, videos, audio files, and other large binary data in MongoDB.
+
+ > bitwise operator
+  - Bitwise operators are used to perform bitwise operations on integer values within the database.
+  - These operators allow you to manipulate individual bits of integer values, which can be useful for various bitwise operations such as setting,
+    clearing, or toggling specific bits within a field.
+
+  * The `bit` operator is used to perform bitwise AND, OR, and XOR operations on integer fields in the documents of a collection. 
+    - It allows you to update specific bits of integer fields based on a given bitmask  
+
+     - Eg:- 
+        db.collection.updateMany(
+                      { _id: 1 },
+                      { $bit: { field: { and: 5, or: 3, xor: 6 } } }
+                                 )
+  * Bitwise Query Operators: MongoDB also provides bitwise query operators, such as $bitsAllSet, $bitsAnySet, and $bitsAllClear,
+                             which allow you to query documents based on the presence or absence of specific bits in integer fields.
+     - Eg :- 
+        db.collection.find({ field: { $bitsAllSet: 5, $bitsAllClear: 3 } })         
+        
+
+> WiredTiger 
+
+ - The WiredTiger storage engine, which is the default storage engine in MongoDB, utilizes checkpoints 
+  and journal files to provide a consistent view of data on disk and facilitate recovery processes.       

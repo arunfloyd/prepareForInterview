@@ -1,6 +1,7 @@
-const { name } = require("ejs");
-
-/// CALL METHOD
+// call: Invokes a function with a specified this value and arguments provided individually.
+// apply: Invokes a function with a specified this value and arguments provided as an array.
+// bind: Creates a new function with a specified this value and optional arguments, which can be called later.
+// /// CALL METHOD
 const obj = {
   name: "Arun",
 };
@@ -26,7 +27,5 @@ function nasmaste(greeting) {
 }
 const wel = nasmaste.bind(object);
 console.log(wel("Good Mrng"));
-
-
 
 
