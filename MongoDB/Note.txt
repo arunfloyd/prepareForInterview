@@ -220,8 +220,11 @@
   - Method to allow the aggregation pipeline to write data to temporary files on disk if the pipeline stages consume more than 100 megabytes of RAM.
 
  > vertical and horizontal scaling
+ 
   * Vertical Scaling (Scaling Up): 
-   - Vertical scaling involves increasing the capacity of a single server or node by adding more resources, such as CPU, memory, or storage, to the existing system.
+   - Vertical scaling involves increasing the capacity of a single server or node by adding more resources, such as CPU, memory, or storage,
+      to the existing system.
+
   * Horizontal Scaling (Scaling Out):
    - Horizontal scaling involves adding more nodes or servers to a system to distribute the load and increase capacity.
    

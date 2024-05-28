@@ -1,0 +1,288 @@
+db.students.insertMany([
+  { 
+    name: "Alice", 
+    age: 24, 
+    major: "Computer Science", 
+    gpa: 3.8, 
+    address: { street: "123 Main St", city: "New York", state: "NY", zip: "10001" },
+    courses: ["Algorithms", "Data Structures", "Operating Systems"]
+  },
+  { 
+    name: "Bob", 
+    age: 22, 
+    major: "Mathematics", 
+    gpa: 3.6, 
+    address: { street: "456 Elm St", city: "Boston", state: "MA", zip: "02110" },
+    courses: ["Calculus", "Linear Algebra", "Statistics"]
+  },
+  { 
+    name: "Charlie", 
+    age: 23, 
+    major: "Physics", 
+    gpa: 3.7, 
+    address: { street: "789 Oak St", city: "Chicago", state: "IL", zip: "60616" },
+    courses: ["Quantum Mechanics", "Thermodynamics", "Electromagnetism"]
+  },
+  { 
+    name: "Diana", 
+    age: 21, 
+    major: "Literature", 
+    gpa: 3.9, 
+    address: { street: "101 Pine St", city: "San Francisco", state: "CA", zip: "94105" },
+    courses: ["Poetry", "Modern Literature", "Shakespeare"]
+  },
+  { 
+    name: "Eve", 
+    age: 25, 
+    major: "Engineering", 
+    gpa: 3.5, 
+    address: { street: "202 Maple St", city: "Seattle", state: "WA", zip: "98101" },
+    courses: ["Mechanics", "Thermodynamics", "Material Science"]
+  }
+]);
+
+? Find the student named "Charlie" and return their address. 
+  
+  db.students.findOne({ name: "Charlie" }, { address: 1, _id: 0 });
+
+? Find all students who are taking the course "Thermodynamics". 
+  
+  db.students.find({ courses: "Thermodynamics" });
+
+? Update Alice's address to "789 Broadway St, New York, NY, 10002". 
+ 
+  db.students.updateOne(
+  { name: "Alice" },
+  { $set: { "address.street": "789 Broadway St", "address.zip": "10002" } }
+  );
+
+? Delete the student who lives in Seattle.
+
+ db.students.deleteOne({ "address.city": "Seattle" });
+
+? Calculate the average GPA of students in each major.
+
+ db.students.aggregate([
+  {
+    $group: {
+      _id: "$major",
+      averageGPA: { $avg: "$gpa" }
+    }
+  }
+ ]);
+
+ ? Find the total number of courses taken by all students.
+ 
+  db.students.aggregate([
+  {
+    $project: {
+      totalCourses: { $size: "$courses" }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      totalCoursesTaken: { $sum: "$totalCourses" }
+    }
+  }
+ ]);
+         OR 
+
+ db.students.aggregate([
+  {
+    $unwind: "$courses" // Deconstructs the courses array
+  },
+  {
+    $group: {
+      _id: null,
+      totalCoursesTaken: { $sum: 1 } // Counts the number of courses taken
+    }
+  }
+])
+
+? List all students along with the number of courses they are taking, sorted by the number of courses in descending order.
+ 
+ db.students.aggregate([
+  {
+    $project: {
+      name: 1,
+      numberOfCourses: { $size: "$courses" }
+    }
+  },
+  {
+    $sort: { numberOfCourses: -1 }
+  }
+ ]);
+              OR
+
+db.students.aggregate([
+  {
+    $unwind: "$courses" // Deconstructs the courses array
+  },
+  {
+    $group: {
+      _id: null,
+      totalCoursesTaken: { $sum: 1 } // Counts the number of courses taken
+    }
+  }
+])
+
+? Find the average age of students in each city.
+ 
+ db.students.aggregate([
+  {
+    $group: {
+      _id: "$address.city",
+      averageAge: { $avg: "$age" }
+    }
+  }
+ ]);
+
+? List majors along with the highest GPA achieved in each major.
+
+ db.students.aggregate([
+  {
+    $group: {
+      _id: "$major",
+      highestGPA: { $max: "$gpa" }
+    }
+  }
+ ]);
+
+
+ >> Advanced
+
+ ? Calculate the average GPA of students in each major, and include only those majors where the average GPA is greater than 3.6.
+
+  db.students.aggregate([
+  {
+    $group: {
+      _id: "$major",
+      averageGPA: { $avg: "$gpa" }
+    }
+  },
+  {
+    $match: {
+      averageGPA: { $gt: 3.6 }
+    }
+  }
+ ]);
+
+? Find the total number of students and the average GPA for each city.
+
+ db.students.aggregate([
+  {
+    $group: {
+      _id: "$address.city",
+      totalStudents: { $sum: 1 },
+      averageGPA: { $avg: "$gpa" }
+    }
+  }
+ ]);
+
+ ? Get the names of the students along with the number of courses they are taking and their major. 
+   Sort the result by the number of courses in descending order, and then by name in ascending order.
+
+   db.students.aggregate([
+  {
+    $project: {
+      name: 1,
+      major: 1,
+      numberOfCourses: { $size: "$courses" }
+    }
+  },
+  {
+    $sort: {
+      numberOfCourses: -1,
+      name: 1
+    }
+  }
+ ]);
+
+? Calculate the average GPA and the standard deviation of GPA for each major.
+
+  db.students.aggregate([
+  {
+    $group: {
+      _id: "$major",
+      averageGPA: { $avg: "$gpa" },
+      stdDevGPA: { $stdDevPop: "$gpa" }
+    }
+  }
+ ]);
+
+ ? List the students who have taken more than 2 courses, and include their name, major, and the courses they are taking.
+
+  db.students.aggregate([
+  {
+    $project: {
+      name: 1,
+      major: 1,
+      courses: 1,
+      numberOfCourses: { $size: "$courses" }
+    }
+  },
+  {
+    $match: {
+      numberOfCourses: { $gt: 2 }
+    }
+  }
+]);
+
+? For each major, calculate the total number of students, the highest GPA, and the lowest GPA.
+
+ db.students.aggregate([
+  {
+    $group: {
+      _id: "$major",
+      totalStudents: { $sum: 1 },
+      highestGPA: { $max: "$gpa" },
+      lowestGPA: { $min: "$gpa" }
+    }
+  }
+ ]);
+
+? Unwind the courses array and count the number of students enrolled in each course.
+ 
+ db.students.aggregate([
+  {
+    $unwind: "$courses"
+  },
+  {
+    $group: {
+      _id: "$courses",
+      numberOfStudents: { $sum: 1 }
+    }
+  }
+ ]);
+
+ ? Find the top 3 cities with the highest average GPA, including the city name and the average GPA.
+
+  db.students.aggregate([
+  {
+    $group: {
+      _id: "$address.city",
+      averageGPA: { $avg: "$gpa" }
+    }
+  },
+  {
+    $sort: { averageGPA: -1 }
+  },
+  {
+    $limit: 3
+  }
+]);
+
+
+
+  
+ 
+
+ 
+
+
+
+
+
+
+ 
