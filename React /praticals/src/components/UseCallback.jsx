@@ -1,10 +1,12 @@
-import  { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 const UseCallback = () => {
   const [count, setCount] = useState(0);
+
   const increment = useCallback(() => {
     setCount((prevCount) => prevCount + 1);
   }, [setCount]);
+  
   return (
     <div>
       <h1>Count :{count}</h1>

@@ -11,9 +11,7 @@
 //         res.end()
 //     })
 
-
 // }).listen(3001)
-
 
 // const http = require('http')
 // const fs = require('fs')
@@ -25,7 +23,6 @@
 //         console.log(data)
 //         res.end()
 //     })
-
 
 // }).listen(3001)
 
@@ -39,8 +36,6 @@
 //     res.write(a)
 //     res.end()
 // })
-
-
 
 // const express = require('express')
 // const app = express()
@@ -85,7 +80,6 @@
 // a()
 // console.log(num)
 
-
 // const arr = [1, 2, 3, 4, 5]
 //     // const arr1 = arr.map((x) => x.toString(2))
 
@@ -94,7 +88,6 @@
 // const arr = [1, 2, 3, 4, 5]
 // const [x, y, ...z] = arr
 // console.log(z)
-
 
 // let arr = { name: "Arun", age: 21 };
 // let { name, age } = arr;
@@ -131,7 +124,6 @@
 // process.nextTick(() => {
 //     console.log("1st Process");
 // });
-
 
 /**
  * Callback Function
@@ -172,3 +164,13 @@
 //     }
 // }
 // console.log(arr)
+
+const http = require("http");
+const server = http.createServer((req, res) => {
+  res.end("<h1>Hello NodeJS</h1>");
+});
+
+const port = 3000;
+server.listen(port, () => {
+  console.log(`Server Started at Port ${port}`);
+});

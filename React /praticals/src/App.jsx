@@ -15,22 +15,25 @@ export const UserName = React.createContext();
 function App() {
   return (
     <>
-      <Provider store={appStore}>
-        <UserName.Provider value={"Arun"}>
-          <Suspense fallback={<div>Loading ...</div>}>
-            <UseContext />
-          </Suspense>
-        </UserName.Provider>
-        <UseState />
-        <UseEffect />
-        <UseRef />
-        <UseCallback />
-        <UseMemo />
-        <UseReducer />
-        <UseReducerCounter />
-        <UseReducerObj />
-      </Provider>
+      <UseReducerObj />
     </>
+    // <>
+    //   <Provider store={appStore}>
+    //     <UserName.Provider value={"Arun"}>
+    //       <Suspense fallback={<div>Loading ...</div>}>
+    //         <UseContext />
+    //       </Suspense>
+    //     </UserName.Provider>
+    //     <UseState />
+    //     <UseEffect />
+    //     <UseRef />
+    //     <UseCallback />
+    //     <UseMemo />
+    //     <UseReducer />
+    //      <UseReducerCounter />
+    //     <UseReducerObj />
+    //   </Provider>
+    // </>
   );
 }
 

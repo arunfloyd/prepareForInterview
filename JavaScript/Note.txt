@@ -17,6 +17,7 @@ Javascript
  ✓ Closure
 
   - Closures in JavaScript are a powerful feature that allows functions to retain access to variables from their containing scope.
+
   - Understanding closures is essential for writing clean, efficient, and maintainable JavaScript code.
 
  ✓ Scope and types of scope
@@ -26,6 +27,7 @@ Javascript
     - Global Scope: Global variables are accessible from anywhere in the code, including inside functions, conditional statements,
                     and loops.
     - Function Scope: They are only accessible within the function in which they are declared.
+    
     - Block Scope: Variables declared with let and const have block scope, meaning they are only accessible within the block in which they are defined.             
 
  ◦ Array methods
@@ -48,9 +50,10 @@ Javascript
 
  ◦ Callback hell
 
-  - Callback hell, also known as the "pyramid of doom," is a common issue in JavaScript programming that arises when multiple 
+  - Callback hell, also known as the "pyramid of do0m," is a common issue in JavaScript programming that arises when multiple 
     nested callbacks are used, leading to code that is difficult to read, maintain, and debug.
-  - This situation occurs when asynchronous operations are chained together, resulting in deeply nested callback functions within each other.
+  - This situation occurs when asynchronous operations are chained together, resulting in deeply nested callback functions
+    within each other.
 
  ◦ Currying
 

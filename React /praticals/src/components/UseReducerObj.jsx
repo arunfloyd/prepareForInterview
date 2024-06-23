@@ -1,11 +1,10 @@
 import  { useReducer } from "react";
-import { useDispatch, useSelector } from "react-redux";
 const counter = { firstCounter: 0, secondCounter: 0 };
+
 
 const countFun = (state, action) => {
   switch (action.type) {
     case "Add1":
-      dispa()
       return { ...state, firstCounter: state.firstCounter + action.value };
     case "Add2":
       return { ...state, secondCounter: state.secondCounter + action.value };
@@ -13,8 +12,8 @@ const countFun = (state, action) => {
 };
 const UseReducerObj = () => {
   const [count, dispatch] = useReducer(countFun, counter);
-  const userName = useSelector((store)=>store.user)
-const dispa = useDispatch()
+//   const userName = useSelector((store)=>store.user)
+// const dispa = useDispatch()
 
   return (
     <div>
@@ -27,3 +26,5 @@ const dispa = useDispatch()
 };
 
 export default UseReducerObj;
+
+

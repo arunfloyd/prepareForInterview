@@ -3,7 +3,7 @@
 ◦ Collection :
     - A collection is a group of documents.
 
-◦ CRUD : f
+◦ CRUD : 
      - CRUD operations in MongoDB refer to the basic methods used to interact with a MongoDB database.
 
         - Create: Insert new documents into the MongoDB database. (insertOne,insertMany)

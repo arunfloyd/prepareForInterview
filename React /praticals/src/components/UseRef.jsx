@@ -1,8 +1,10 @@
-import  { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 const UseRefExample = () => {
-  const inputRef = useRef(null); 
-  const [inputValue, setInputValue] = useState(""); 
+
+  const inputRef = useRef(null);
+  const [inputValue, setInputValue] = useState("");
+  
   const handleFocus = () => {
     if (inputRef.current) {
       inputRef.current.focus();
@@ -29,5 +31,6 @@ const UseRefExample = () => {
     </div>
   );
 };
+
 
 export default UseRefExample;

@@ -14,10 +14,15 @@ const UseMemo = () => {
   const increment = ()=>{
     setCount(count+1)
   }
+  const decrement =()=>{
+    setCount(count-1)
+  }
   return (
     <div>
       <h1>Count :{count}</h1>
       <button onClick={increment}>Add</button>
+      <button onClick={decrement}>Add</button>
+
       <h3>Expensive Calculation : {calculation}</h3>{" "}
     </div>
   );
