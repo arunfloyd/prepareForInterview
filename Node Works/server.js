@@ -165,12 +165,21 @@
 // }
 // console.log(arr)
 
-const http = require("http");
-const server = http.createServer((req, res) => {
-  res.end("<h1>Hello NodeJS</h1>");
-});
 
-const port = 3000;
-server.listen(port, () => {
-  console.log(`Server Started at Port ${port}`);
-});
+
+
+const express = require('express')
+
+const app = express()
+
+app.get('/',(req,res)=>{
+
+    res.send('<h1>Hello NodeJS</h1>')
+
+})
+
+app.listen(3000,()=>{
+
+    console.log(`Server Started at Port 3000`)
+    
+})
