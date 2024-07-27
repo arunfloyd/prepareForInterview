@@ -1,0 +1,233 @@
+Topics:
+Escape sequence
+Bitways oparetor
+Optional chaining oparetor
+Nullish oparetor
+Generator function
+Factory function
+IIFE
+Json.parse
+Call and apply
+Shallow and deep copy
+Extends
+Throw
+Query and params
+Res.end
+Res.json
+App.all
+Transaction
+Pagination
+Embedded document
+Views
+Atomicity
+Partition tolarence
+Types of indexing
+TTL indexing
+Bulk write
+Babel
+Profiler
+Fragment
+Error boundary
+Strict mode
+Code splitting in react
+Lazy loading
+Persistence in redux
+Stack underflow
+Stack principal in recursion
+Right element in heap -2*ParentIndex+2
+Left element in heap - 2*ParentIndex+1
+Spanning tree
+Minimum spanning tree
+Graph indexing
+Graph representation
+
+rest parameter
+event bubbling
+Weakset
+Weakmap
+Object.prototype
+Proxy object
+flatMap
+Array methods practicals
+Body-parser
+Stream/Buffer
+Promise and methods
+Async/await
+Threadpool
+Libuv
+exec
+execFile
+EventEmitter
+Rate limiting
+Content negotiation
+express.urlencoded
+app.locals
+partials 
+res.setHeader
+JWT structure
+proxy server
+
+Geospatial index
+TTL index
+BSON advantages
+covered query
+clustered collection
+$merge
+$facet
+$elemMatch
+Lookup
+Unwind
+regex
+
+Aggregate practicals
+
+axios interceptors
+throttling
+treeshaking
+deadcode elimination
+bundling
+React.memo
+Shadow DOM
+HTML sanitization
+event delegation
+transpiler
+
+segment tree
+monotonic stack
+Serialize a binary tree
+Tarjan’s algorithm
+suffix tree
+Red-Black Tree
+AVL tree
+Sparse array
+Jagged array
+Divide and conquer technique
+load factor
+Callback hell
+Promise
+Promise.any Vs promise.all
+MicroTask queue
+Process.nextTick()
+Node---
+Cluster
+Pipe
+I/O in node
+Thread pool
+React:--
+DOM manupulation in react
+DSA:--
+Disadvantage of recursionT
+Reverse the string using recursion
+Reverse the string using stack
+Sort the array of string
+Find the elemnet from array of string using binary search
+
+Pending
+Javascript 
+-what is purpose/benefits of closures 
+-prototype 
+-purpose of higher order function 
+-difference between deep cloning and shallow cloning
+
+Node:
+-microtask queue , timer queue 
+-difference between spawn and fork 
+-Piping 
+-event emitter 
+-difference between promise and observables
+-write syntax of callback hell
+-setimmediate 
+
+React.js:
+-need practical exposure of useMamo and useCallback 
+-react.mamo
+-life cycle methods 
+
+DS:
+-time complexity of quick sort, merge sort, bubble sort in best , average and worst case 
+-reverse array using stack
+-time complexity of BST
+
+Create an Express route that accepts two numbers as query parameters and displays their sum on a web page
+primitive vs non-primitive datatypes
+first class functions
+what is promise
+type casting
+implicit / explicit type casting
+default parameters
+local storage vs session storage
+what is http
+process 
+threads
+streams in node.js
+delete a file using fs
+CORS
+event emitter
+embedded documents
+error handling in React
+synthetic events
+core principles of Redux
+disadvantages of recursion
+peek
+load factor
+applications of heap
+controlled & uncontrolled elements
+how t pass data from child to parent using props
+react memo vs pure components
+hash router
+limitations of functional components
+make an api call on load of a component & render the response in ui
+find out the highest salaried employee from an array of objects
+poly fills
+Object.freeze vs object.seal
+how to find out if an object is empty or not
+remove all whitespaces from a string
+print multiples of 5 using recursion
+minimum spanning tree
+degree of a tree
+dynamic routing
+libuv
+writeHead
+BSON vs JSON
+queries with logical operators
+pattern matching using regex
+practice more aggregate workouts
+journaling
+bulkwrite operations
+find non repeating elements from an array
+find the shortest word in a string
+monotonic stack
+monotonic queue
+limitations of CSR
+limitations of functional component
+forwardRef
+process.nextTick
+query params & path params
+CSRF
+session vs token
+querying with logical operators
+concat
+practice aggregate queries involving multiple stages
+-----------------------------------------------------------------------------------
+
+Priority que
+Perfection Hash function
+Open Addressing
+Double Hashing.recursion; 
+time complexity, 
+binary search algorithm
+-Need more clarification in theory. Maximum height of tree
+Check two trees are identical
+Graph vs tree
+BFS - pending,
+first week DSA -
+memory allocation in array
+sparse array
+heap memory
+string vs array
+are string mutable?
+find the longest possible palindome
+circular linked list
+words = ['lc', 'bb', 'qm', 'cl', 'dq', 'mg']
+output = "lcgmbbmgcl"
+write a function to return the extra char in string2 which is not in string1
